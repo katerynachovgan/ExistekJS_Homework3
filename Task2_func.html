@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task2 Functions</title>
+</head>
+<body>
+    <script>
+        let num = parseInt(prompt("Enter the first number: ", "0"));
+
+        function posNeg(num){
+            if (num > 0) document.write(`Number ${num} is positive`);
+            else if (num < 0) document.write(`Number ${num} is negative`);
+            else document.write(`Number is 0`);
+        }
+        posNeg(num);
+        document.write('<hr>');
+
+        function isSimple(num){
+            let res = 0;
+            for (let i = 2; i < num/2; i++) {
+                if ((num % 2) === 0){
+                    res++;
+                    document.write(`Number ${num} is compound`);
+                    return;
+                } 
+            }
+            return document.write(`Number ${num} is simple`);
+        }
+        isSimple(num);
+        document.write('<hr>');
+
+        function divided(num){
+            if(num % 2 === 0) document.write(`Number ${num} is divisible by 2 without remainder`);
+            else document.write(`Number ${num} is not divisible by 2 without remainder`);
+            document.write('<hr>');
+            if(num % 3 === 0) document.write(`Number ${num} is divisible by 3 without remainder`);
+            else document.write(`Number ${num} is not divisible by 3 without remainder`);
+            document.write('<hr>');
+            if(num % 5 === 0) document.write(`Number ${num} is divisible by 5 without remainder`);
+            else document.write(`Number ${num} is not divisible by 5 without remainder`);
+            document.write('<hr>');
+            if(num % 6 === 0) document.write(`Number ${num} is divisible by 6 without remainder`);
+            else document.write(`Number ${num} is not divisible by 6 without remainder`);
+            document.write('<hr>');
+            if(num % 9 === 0) document.write(`Number ${num} is divisible by 9 without remainder`);
+            else document.write(`Number ${num} is not divisible by 9 without remainder`);
+            return;
+        }
+        divided(num);
+
+    </script>
+    
+</body>
+</html>
