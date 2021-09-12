@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task1 Array</title>
+</head>
+<body>
+    <script>
+        let n = parseInt(prompt("Enter the length of array: ", "0"));
+
+        let arr = new Array(n);
+
+        function getRandomInt(min, max) {
+            return Math.floor(Math.random() * (max - min)) + min;
+        }
+        for (let i = 0; i < n; i++) {
+            const el = getRandomInt(1, 1000);
+            arr[i] = el;
+        }
+
+        document.write(arr, '<hr>');
+
+        document.write(`The largest value of the array is ${Math.max(...arr)}`);
+        document.write('<hr>');
+        
+        document.write(`The smallest value of the array is ${Math.min(...arr)}`);
+        document.write('<hr>');
+        
+        const sum = arr.reduce((prev, current, index, arr) => {
+            return prev + current;
+         }, 0);
+
+        document.write(`The total sum of elements ${sum}`);
+        document.write('<hr>');
+
+        document.write(`The arithmetic mean of all elements ${sum/n}`);
+        document.write('<hr>');
+
+        const oddValues = arr.filter(el => el % 2 !== 0);
+        document.write(`All odd values: ${oddValues}`);
+
+
+    </script>
+    
+</body>
+</html>
